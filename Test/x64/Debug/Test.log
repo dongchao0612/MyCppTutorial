@@ -1,0 +1,4 @@
+﻿  main.cpp
+main.obj : error LNK2019: 无法解析的外部符号 "class Point __cdecl p3(void)" (?p3@@YA?AVPoint@@XZ)，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 "class Point __cdecl p4(void)" (?p4@@YA?AVPoint@@XZ)，函数 main 中引用了该符号
+D:\github\MyCppTutorial\Test\x64\Debug\Test.exe : fatal error LNK1120: 2 个无法解析的外部命令

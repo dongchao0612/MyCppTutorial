@@ -1,4 +1,4 @@
-# MyC-Tutorial
+# MyCpp-Tutorial
 ## ch04 类和对象
 
 ### 4.2 类和对象

@@ -4,17 +4,16 @@ using namespace std;
 
 class Point
 {
-public:
-	Point();
+	public:
+		Point();
+		Point(int x, int y);
+		void move(int newX, int newY);
+		int getX()const;
+		int getY()const;
+		~Point();
 
-	Point(int x, int y);
-	void move(int newX, int newY);
-	int getX()const;
-	int getY()const;
-	~Point();
-
-private:
-	int x, y;
+	private:
+		int x, y;
 };
 Point::Point()
 {
@@ -51,7 +50,7 @@ int main()
 	Point p[2] ;
 	cout << "(" << p[0].getX() << "," << p[0].getY() << ")" << endl;
 	cout << "(" << p[1].getX() << "," << p[1].getY() << ")" << endl;
-	for(int i=0;i<2;i++)
+	for(int i=0; i<2; i++)
 		p[i].move(i+10,i+20);
 	cout << "(" << p[0].getX() << "," << p[0].getY() << ")" << endl;
 	cout << "(" << p[1].getX() << "," << p[1].getY() << ")" << endl;

@@ -37,6 +37,6 @@ int main() {
 
 	d.Base2::var = 3;
 	d.Base2::fun();
-	
+
 	return 0;
 }

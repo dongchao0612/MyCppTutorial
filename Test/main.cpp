@@ -1,37 +1,39 @@
+
 #include<iostream>
 
 using namespace std;
 
-class Base0 {
+class Base1 {   //³éÏóÀà
 public:
-	Base0(int var):var0(var){}
-	int var0;
-	void fun0() {
-		cout << "member of base0" << endl;
-	}
+	virtual void display() const = 0;
 };
-class Base1 :virtual public Base0 {
+class Base2 : public Base1 {
 public:
-	Base1(int var) :Base0(var){}
-	int var1;
+	void display()const;
 };
-class Base2 :virtual public Base0 {
+void Base2::display()const
+{
+	cout << "Base2::display()" << endl;
+}
+class Derived :public Base2
+{
 public:
-	Base2(int var) :Base0(var) {}
-	int var2;
+	void display()const;
 };
-class Derived :public Base1, public Base2 {
-public:
-	Derived(int var):Base0(var),Base1(var),Base2(var){}
-	int var;
-	void fun() {
-		cout << "member of Derived" << endl;
-	}
-};
-int main() {
-	Derived d(1);
-	d.var = 2;
-	d.fun();
-	
+void Derived::display()const
+{
+	cout << "Derived::display()" << endl;
+}
+void fun(Base1* ptr)
+{
+	ptr->display();
+}
+int main()
+{
+	Base2 base2;
+	Derived derived;
+
+	fun(&base2);
+	fun(&derived);
 	return 0;
 }

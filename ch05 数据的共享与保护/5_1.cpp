@@ -5,8 +5,7 @@ int i;
 namespace Ns {
 	int j;
 }
-int main()
-{
+int main() {
 	i = 5;
 	Ns::j = 6;
 	{

@@ -1,2 +1,11 @@
 ﻿  main.cpp
-  Test.vcxproj -> D:\Documents\github\MyCppTutorial\Test\x64\Debug\Test.exe
+D:\Documents\github\MyCppTutorial\Test\main.cpp(20,1): error C2662: “const T &Store<T>::getElem(void)”: 不能将“this”指针从“const Store<Student>”转换为“Store<Student> &”
+          with
+          [
+              T=Student
+          ]
+D:\Documents\github\MyCppTutorial\Test\main.cpp(20,21): message : 转换丢失限定符
+D:\Documents\github\MyCppTutorial\Test\main.cpp(15,11): message : 参见“Store<Student>::getElem”的声明
+D:\Documents\github\MyCppTutorial\Test\main.cpp(18): message : 在编译 类 模板 成员函数“std::ostream &operator <<(std::ostream &,const Store<Student>)”时
+D:\Documents\github\MyCppTutorial\Test\main.cpp(61): message : 查看对正在编译的函数 模板 实例化“std::ostream &operator <<(std::ostream &,const Store<Student>)”的引用
+D:\Documents\github\MyCppTutorial\Test\main.cpp(56): message : 查看对正在编译的 类 模板 实例化“Store<Student>”的引用
